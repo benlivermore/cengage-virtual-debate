@@ -1,0 +1,117 @@
+/*  ============================================================================
+    mindtap/lists.css
+
+    Basic ul, ol, dl, plus more complex structures
+    ============================================================================ */
+    
+
+/* standard lists */
+ul>li {list-style-type:disc;}
+ol>li {list-style-type:decimal;}
+ol{padding:10px 10px 10px 20px;}
+/* plain - undecorated, unindented list */
+ul.plain li{
+    list-style-type:none;
+    margin-left:0;
+}
+
+/* definition lists */
+dl {margin-top:-8px;}
+dt {
+	margin-top:8px;
+	font-weight:bold;
+	color:#666;
+}
+dd {
+ 	font-size:110%;
+    margin: 4px 0 12px 4px;
+	color:#999;	
+}
+
+ul ul {padding: 5px 10px 5px 20px }
+ul.important li,
+ol.important li,
+ul.important a,
+ol.important a {
+	font-size:116%;
+	font-weight:normal;
+}
+ul.important li,
+ol.important li {
+	padding:6px 0;
+}
+
+
+/* sparse - extends any list */
+ol.sparse li, ul.sparse li {
+    margin-bottom:8px;
+}
+
+/* TODO: is this used? */
+ul.floatList{padding:0!important;}
+ul.floatList li{
+	background:none;
+	min-height:0;
+	border-radius:0;
+	padding:5px;
+	float:left;
+	width:45%;
+	clear:none;
+	margin:0;
+}
+li.strike {
+	text-decoration:line-through;
+}
+
+/* TODO: is this used? A: not yet (20120126). Can be improved with display:inline-block */
+/* nb_flowList - extends <ul> - block-level items that flow across screen and wrap */
+.nb_flowList {
+	width:auto;
+	overflow:visible;
+	float:none;
+	*zoom:1;
+}
+.nb_flowList > li {
+	float:left;
+	list-style-type:none;
+	padding:0;
+	margin:0 1em 1em 0;
+	padding:5px;
+}
+
+/* use a "last item" to clear float */
+.nb_flowList > .lastItem {
+	clear:right;
+}
+
+
+/* nb_stacklist - extends <ul> - block-level items that stack on the screen */
+.nb_stacklist{padding-top:0;}
+.nb_stacklist li {
+    position:relative;
+	margin:1px 0;
+	clear:left;
+	overflow:visible;	
+}
+
+.nb_stacklist .nb_thumbImage {
+    float:left;
+}
+
+.nb_stacklist .oo_media {
+    margin:0;
+}
+.nb_stacklist .item{
+    min-height:102px!important;
+}
+
+
+/* typeList - extends nb_stackList */
+.typeList {
+    overflow:auto;
+	padding-bottom:0;
+}
+
+.lpn_stacklist li.noclick {
+	cursor: default;
+}

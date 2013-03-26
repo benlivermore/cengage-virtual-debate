@@ -1,0 +1,101 @@
+/*  ============================================================================
+    mindtap/dock.css
+
+    App Dock styles
+    ============================================================================ */
+
+
+
+
+div.nb_dock {
+	width:41px;
+	text-align:center;
+	background: transparent url('/static/nb/ui/images/dock_bknd.png');
+	position:fixed;
+	line-height:0;
+	top:41px;
+	right:0;
+	margin:0 0 0 8px;
+	padding:6px 0 0 2px;
+	z-index:35;
+}
+
+.nb_dock ul, .nb_dock li { padding: 0; margin: 0; }
+
+.nb_dockItem:hover, .nb_dockItem.pseudofocus {
+	background: #666 url('/static/nb/ui/images/open_small_white.png') -20px 50% no-repeat;
+	outline:0!important;
+}
+.nb_dockItem.nb_activeDockItem:hover {
+	background: #444 url('/static/nb/ui/images/close_small_white.png') 0% 50% no-repeat;
+}
+
+.nb_dock li a {
+	display:block;
+	padding:0px 4px 5px 4px;
+	margin: 4px 2px 2px 0;
+	height: 35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+.nb_dockItem.nb_activeDockItem {
+	background:#666;
+}
+
+.nb_dock li .nb_activeDockItem:after, 
+.nb_dock li a.pseudofocus:after { 
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #666;
+    border-top: 20px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    margin-top: -40px;
+    position: absolute;
+    right: 94%;
+    width: 0;
+    z-index: 2;
+}
+
+.nb_dock li img {
+	padding:4px 0;
+	width:32px;
+	z-index: 10;
+    -webkit-transition: .2s linear;
+	-moz-transition: .2s linear;
+	-o-transition: .2s linear;
+	-ms-transition: .2s linear;
+	transition: .2s linear;
+	position: relative;
+}
+.nb_dock li:hover img{
+	margin-left:-10px;
+}
+.nb_dock li a div.appName{
+    background: url('/static/nb/ui/images/blacktrans.png') top left repeat #666;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 90%;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: -32px;
+    padding: 2px 12px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 5;
+    -webkit-transition: .8s linear;
+	-moz-transition: .8s linear;
+	-o-transition: .8s linear;
+	-ms-transition: .8s linear;
+	transition: .8s linear;
+	width:0;
+	opacity:0;
+	right:-150px;
+
+}
+.nb_dock li a.pseudofocus div.appName{
+	right:65px;
+	width:auto;
+	opacity:.8;
+}

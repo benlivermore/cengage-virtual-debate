@@ -1,0 +1,381 @@
+/*  ============================================================================
+    mindtap/forms.css
+
+    Forms, form controls, labels, form errors, form help text
+    ============================================================================ */
+
+
+
+
+    /* TODO: form styles need to be rewritten. */
+    /* TODO: needs better internal organization. */
+    /* TODO: remove all the "adminform" qualifications for the generic stuff...forms are forms. */
+
+    textarea {
+      height:5em;
+    }
+
+    select {
+        font-size:85%;
+        max-width:400px;
+    }
+
+    .adminForm {
+      margin:12px 0 18px 0;
+      overflow:auto;
+    }
+    .adminForm .nb_overlayTitle{
+      margin:0 0 18px 0;	
+    }
+    .form_area {
+        background:#8c8c8c url(/static/nb/ui/images/dk_blend.jpg) repeat-x;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        padding:20px 20px 5px 20px;
+        margin:10px;
+    	overflow:auto;
+	box-shadow: 0 0 10px #222;
+        -moz-box-shadow: 0 0 10px #222;
+        -webkit-box-shadow: 0 0 10px #222;
+    }
+        .lpn_form { display: none; }
+
+
+    .adminForm {
+            overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .adminForm #info,
+    .adminForm #lms, 
+ 	.adminForm .formGroup{
+        background:#e0e0e0 url(/static/nb/ui/images/lt_blend.jpg) repeat-x;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        padding:10px 10px 5px 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px #555;
+        -moz-box-shadow: 0 0 10px #555;
+        -webkit-box-shadow: 0 0 10px #555;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+ 	.adminForm .formGroup{
+		margin:0 20px 20px 20px;
+	}
+    .adminForm .formGroup h3{
+        color:#666;
+        margin: 0 0 10px 0;
+        font-weight: bold;
+        font-size:100%;
+		padding-top:4px;
+    }
+
+    .adminForm fieldset {
+      font-size: 110%;
+    }
+
+    .adminForm #info h3{
+        color:#333;
+        margin: 0 0 15px 0;
+        font-weight: bold;
+        font-size:120%;
+    }
+
+    .adminForm #lms h2 {
+        color: #008cd2;
+        font-weight: bold;
+    }
+
+    .adminForm .instructions {
+        color:#333;
+        margin: 12px 12px 30px 12px;
+        padding-bottom: 10px;
+        font-weight: normal;
+        font-size:95%;
+        border-bottom: solid 2px #cecece;
+    }
+
+    .adminForm .small_icon {
+        margin: 0px 10px 0 0px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .adminForm li {
+      font-size:120%;
+    }
+
+    .adminForm label {
+      display:block;	
+      margin:0 0 2px 10px;
+      clear:left;
+      color:#fff;
+      font-weight:400;
+      font-size:120%;
+    }
+	.adminForm .formGroup label{
+        color:#333;
+        font-weight:bold;
+		display:inline;
+		margin:0;
+	}
+	.adminForm .formGroup p{
+	  color:#666;
+      font-size:105%;
+	  padding-top:0;
+	}
+	.adminForm .checkList p{
+		margin-left:24px;
+	}
+	.adminForm .checkList .nb_notify{
+		margin-left:35px;
+		margin-top:0;
+	}
+	.adminForm .formGroup li{
+		border-bottom:2px solid #ccc;
+		padding-bottom:8px;
+		margin-bottom:12px;
+	}
+	.adminForm .formGroup li:last-of-type{
+		border-bottom:0;
+		padding-bottom:0;
+		margin-bottom:0;
+	}
+
+    .inlineTextBuilder .adminForm label {
+      display:block;	
+      margin:0 0 2px 10px;
+      clear:left;
+      color:#222;
+      font-weight:normal;
+      font-size:105%;    
+    }
+
+    .adminForm #settings label {
+        color:#222;
+        font-weight:bold;
+    }
+
+    .adminForm #lms label {
+        color:#444;
+        font-weight:bold;
+        margin-bottom: 5px;
+    }
+    .adminForm #lms .reqNote {
+        color:#CC6600;
+        float: right;
+        margin: 0px 20px 0 0;
+        font-size: 105%;
+        font-weight: bold;
+    }
+
+    .adminForm #lms label .req {
+        color:#CC6600;
+    }
+
+    .adminForm #lms .example {
+        color:#666;
+        font-style: italic;
+        font-weight: normal;
+        margin-left: 5px;
+    }
+
+    .adminForm label.sidelabel{display:inline; margin-left:4px;}
+    .adminForm input, .adminForm textarea, .adminForm .readonly{
+      width:500px;	
+      margin:0 10px 18px 10px;
+      padding: 4px;
+    }
+
+    .adminForm .readonly{
+      margin:4px 0 18px 22px;
+      color:#aaa;	
+    }
+
+    .adminForm input#name {
+        color:#008cd2;
+        font-weight: bold;
+    }
+    .adminForm textarea#description {
+        color:#666;
+    }
+    .adminForm input.date {
+        width: 250px;
+    }
+
+    .adminForm #settings input {
+        float: left;
+    }
+
+    .adminForm select
+    {
+    	margin:0 0 18px 10px;	
+    }
+    .adminForm .formval{
+      margin:4px 0 18px 24px;
+    }
+    .adminForm input.check{
+      width:auto;	
+	  margin:0 5px 12px 10px;
+    }
+    .adminForm label.error{
+    	display:inline;
+    	color:#fe8003;
+    	margin-left: 10px;
+    	clear:none;
+        font-size:113%;
+    }
+
+    .adminForm #settings label.error{
+    	display:inline;
+    	margin-left: 0px;
+    	clear:none;
+            font-size:113%;
+    	font-weight: normal !important;
+    }
+    .adminForm input.error{
+       border:2px solid #fe8003;	
+    }
+    .adminForm select.error{
+       border:2px solid #fe8003;
+       -webkit-box-shadow:0 0 5px #fe8003;
+       -moz-box-shadow:0 0 5px #fe8003;
+       box-shadow:0 0 5px #fe8003;
+    }
+    .adminForm > div {
+    	clear:both;
+    }
+
+    .choices label, .choices input {
+        display:inline;
+        margin:0;
+    }
+    .choices label {
+        margin-right:1em;
+    }
+
+    .adminForm #lms .courseInfo,
+    .adminForm #lms .courseInfo label,
+    .adminForm #lms .courseInfo input {
+        float: left;
+        width: 60%;
+        clear: none;
+    }
+
+    .adminForm #lms .section {
+        float: right;
+        width: 35%;
+        clear: none;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    .adminForm #lms .start {
+        float: left;
+        width: 130px;
+        clear: none;
+        margin-bottom: 20px;
+    }
+
+    .adminForm #lms .end {
+        float: left;
+        width: 130px;
+        clear: none;
+    }
+
+    .adminForm #lms .time {
+        float: left;
+        width: 400px;
+        clear: none;
+    }
+
+    .adminForm #lms ol {
+        margin: -20px 20px 20px 20px;
+    }
+
+    .adminForm #lms ol li {
+        border-bottom: solid 2px #cecece;
+        color: #333;
+        padding: 20px;
+        list-style: decimal;
+        min-height: 55px;
+        margin-left: 20px;
+        font-size: 120%;
+    }
+
+    .adminForm #lms ol li img.inline {
+        padding-left: 55px;
+    }
+
+    .adminForm #lms ol li img.right {
+        float: right;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .adminForm a.ui-selectmenu {
+        margin-left: 10px;
+    }
+
+    select#timezone {
+        padding: 5px;
+    }
+
+
+    .ui-widget {
+    	z-index: 31;
+    }
+
+    .disabled{opacity:.3;cursor:default!important;}
+    .nb_error{
+      font:normal 12px Helvetica, Arial, sans-serif;
+      border:1px solid #999;
+      background:url(/static/nb/ui/images/prog_late.png) no-repeat 5px 5px #fbfbda;	
+      color:#000;
+      padding:6px 12px 6px 32px;
+      margin:6px auto;	
+      width:80%;
+      border-radius:4px;
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+    }
+    .nb_success{
+      font:normal 14px/19px Helvetica, Arial, sans-serif;
+      border:1px solid #999;
+      background:url(/static/nb/ui/images/prog_done.png) no-repeat 10px 10px #fbfbda;	
+      color:#000;
+      padding:10px 12px 10px 40px;
+      margin:6px;	
+      width:80%;
+      border-radius:4px;
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+    }
+	.nb_alert_fixed{position:fixed;z-index:50;}
+    .nb_notify{
+      /*font:normal 12px Helvetica, Arial, sans-serif; */
+      background:url(/static/nb/ui/images/notify.png) no-repeat 5px 5px #fff;	
+      color:#666;
+      padding:6px 12px 6px 26px;
+      margin:6px;	
+      width:80%;
+      border-radius:4px;
+      -moz-border-radius:4px;
+      -webkit-border-radius:4px;
+      line-height:1.2;
+    }
+    .nb_notify_inline{
+      float:left; 
+      width:450px; 
+      margin-top:0;
+    }
+
+    label>.nb_help {margin-left:0.5em;}
+    .noteditable{border:0;background-color:transparent;}
+    
+    
+    
+    
+    
+    

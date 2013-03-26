@@ -1,0 +1,72 @@
+/*  ============================================================================
+    mindtap/session.css
+
+    Login, logout, timeout, etc.
+    ============================================================================ */
+
+
+#logout{
+	background-color:#000;
+	background-color:rgba(0,0,0,0.45);
+	border-radius:6px;
+    color:#000;
+	width:550px;
+	padding:10px 30px 30px 30px;
+	margin:0px auto 0 auto;
+	border:1px solid #000;
+	text-align:center;
+	overflow:hidden;
+}
+#logout h1{
+	color:#fff;
+	font-size:110%;
+	margin:0 0 24px 0;
+	font-weight:bold;
+}
+#logout h1, #logout p{
+	text-align:center;
+	padding:0;
+}
+.logoutpage .splash_branding{
+	width:600px;
+	margin:8px auto 0 auto;	
+   border:none;
+}
+#logoutLogo{margin:0 0 20px 0;}
+
+#idleTimeoutDialog, #session-expired-dialog {
+	height:175px;
+    width:400px;
+    margin-left:-200px;
+    top:120px;	
+    z-index: 100001;
+}
+
+#logout .form {
+  float: left;
+}
+#logout .login{
+	display:inline-block;
+}
+#logout div.submit {
+  float: left;
+  margin: 43px 0 0 20px;
+}
+
+#logout .field {
+  color: white;
+  font-size: 0.8em;
+  padding: 3px 0 12px 0;
+}
+
+#logout .field label {
+  width: 100px;
+  float:left;
+  line-height:28px;
+  font-size:140%;
+}
+
+#logout input[type="text"],input[type="password"]{font-size:110%; padding:2px;width:200px;}
+#logout input[type="checkbox"]{float:left;height:26px;}
+#logout .alignment{float:left; width:100px;}
+#logout .nb_error{padding:0;}

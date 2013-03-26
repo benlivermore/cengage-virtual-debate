@@ -1,0 +1,298 @@
+/*  ============================================================================
+    mindtap/overlays.css
+
+    Popups, modals, etc. and related styles
+    ============================================================================ */
+
+
+
+
+/* ====== Overlays ====== */
+
+.nb_overlay {
+	padding:4px 4px 0px 4px;
+	position:fixed;
+  z-index:20;
+}
+.nb_fullwindow{
+	position:absolute;
+    top:0;
+	width:100%;
+	height:100%;
+    border:0;
+	left:0;
+	right:0;
+	bottom:0;
+	padding:0;
+}
+h2.nb_overlayTitle {
+	font-weight:normal;
+	/* color:#B6D846; merge */
+  color:#DF7C08;
+    font-size:112%;
+    padding-top:4px;
+}
+h4.nb_overlayTitle{color:#DF7C08;}
+.nb_overlayTitle a {
+  text-decoration:underline;
+  color:#c60;
+}
+
+
+/* for the message that appears in the Full Book application
+when a user selects text*/
+#pointer_message{
+	width: 80px; 
+	padding: 3px 8px; 
+	font-size: 90%; 
+	font-family: arial, helvetica, clean, sans-serif; 
+	color: white;
+	position: absolute;
+	z-index: 100;
+	background-color: #111;
+}
+
+#pointer_message_arrow{
+	position: absolute; 
+	z-index: 1000;
+	top: 3px;
+	left: -16px;
+	
+}
+
+
+/* TODO: is this used? */
+.nb_windowControls {
+	font-size:93%;
+	text-transform:uppercase;
+	color:#888;
+}
+
+/* TODO: reconcile this with .nb_modalPanel */
+.nb_underlay {
+    background-color:rgb(50,50,50);
+	filter: alpha(opacity=60); /* internet explorer */
+	opacity: 0.6;           /* fx, safari, opera, chrome */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=60)"; /*IE8*/
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:200;
+    top:0;
+    left:0;
+}
+
+
+.nb_closeIcon{
+  background: url(/static/nb/ui/images/closeIcons.png) no-repeat -20px 0px transparent;
+  width:20px;
+  height:20px;
+}
+.nb_closeIcon:hover{background-position: -20px -20px;}
+.nb_closeRight{float:right;}
+
+/* ====== Modals ====== */
+
+.nb_modalPanel {
+    top:40px;
+	left:50%;
+	width:750px;
+	min-height:50px;
+	margin-left:-375px;
+	padding:8px;
+	bottom:20px;
+	overflow:auto;
+	/* z-index:50; merge */
+  z-index:100000;
+}
+.nb_modalPanelSmall {
+    top:80px;
+	left:50%;
+	width:500px;
+	min-height:50px;
+	margin-left:-250px;
+	padding:8px;
+}
+.nb_modalFullHeight {
+	bottom:20px;
+	overflow:auto;
+}
+.nb_modalHead{
+  margin:0 0 12px 8px;	
+}
+.nb_modalHead h3{padding:0; padding-bottom: 10px;}
+
+#nb_modalLayer {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+.alertPanel {
+  font-weight:200;
+  padding:4em 6em 5em 9em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size:120%;
+}
+
+.alertPanel h2 {
+  padding-bottom:1em;
+}
+
+.alertPanel .panelIcon {
+  position:absolute;
+  left:86px;
+  top:60px;
+}
+
+.closeButton {
+   position:absolute;
+   top:5px;
+   right:5px; 
+}
+
+/* "click-catcher" for modal panels */
+.nb_modalScreen {
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+    background-color:rgb(50,50,50);
+	filter: alpha(opacity=60); /* internet explorer */
+	opacity: 0.6;           /* fx, safari, opera, chrome */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=60)"; /*IE8*/
+	z-index:-1;
+	position:fixed;
+	width:100%;
+	height:100%;
+}
+
+
+
+/* ====== Infopop ====== */
+
+.nb_infoPop{
+    color:#333;
+    width:220px;
+    position:absolute;	
+    padding:0;
+    border:4px solid #fff;
+    display:none;
+	z-index:500;
+	background-color:#dedede;
+    box-shadow: 0 0 24px #111;
+    -moz-box-shadow: 0 0 24px #111;
+    -webkit-box-shadow: 0 0 24px #111;
+  border-radius:6px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+	font-size:100%;
+  cursor: default;
+}
+.nb_infoPop_wide{
+  width:350px;
+}
+.nb_topArrow, .nb_topRightArrow{
+	margin-top:25px;
+  	margin-left:-8px;
+}
+.nb_topArrow .nb_infoPopArrow{
+   position:absolute;
+   top:-10px;
+   left:18px;
+   width: 0;
+   height: 0;
+   /* border-bottom: 10px solid #dedede; */
+   border-bottom: 10px solid #FFF;
+   border-right:10px solid transparent;
+   border-left:10px solid transparent;
+}
+.nb_topRightArrow .nb_infoPopArrow{
+	left:auto;
+	right:18px;
+}
+.nb_centerArrow .nb_infoPopArrow{
+  left:135px;
+}
+
+.nb_topArrow .nb_infoPopArrowBorder{
+   border-bottom: 10px solid #fff; 
+   /* border-bottom: 10px solid #999; merge */
+   border-right:10px solid transparent;
+   border-left:10px solid transparent;
+   height:0;
+   width:0;
+   position:absolute;
+   /* top:-14px; merge */
+   top:-12px;
+   left:18px;
+}
+.nb_topRightArrow .nb_infoPopArrowBorder{
+	left:auto;
+	right:18px;
+}
+.nb_centerArrow .nb_infoPopArrowBorder{
+  left:135px;
+}
+
+.nb_leftArrow{
+	margin-left:10px;
+  	margin-top:-24px;
+}
+.nb_leftArrow .nb_infoPopArrow{
+   position:absolute;
+   top:18px;
+   left:-14px;
+   width: 0;
+   height: 0;
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent; 
+   /* border-right:10px solid #dedede; merge */
+   border-right:10px solid #FFF;
+}
+
+.nb_leftArrow .nb_infoPopArrowBorder{
+   border-top: 10px solid transparent;
+   border-bottom: 10px solid transparent; 
+   /* border-right:10px solid #fff; merge */
+   border-right:10px solid #999;
+   height:0;
+   width:0;
+   position:absolute;
+   top:18px;
+   /* left:-14px; merge */
+   left:-16px;
+}
+
+.nb_infoPopClose{
+   background: url('/static/nb/ui/images/close2.png') no-repeat top left transparent;
+   position:absolute;
+   top:5px;
+   /* right:15px; merge */
+   right:5px;
+   width:21px;
+   height:21px;	
+   cursor:pointer;
+}
+.masters_status{
+  width:425px;
+}
+.iconFloat{
+	float:left;
+	margin:12px 0 0 12px;
+}
+.iconFloatText{overflow:hidden;}
+
+.nb_scrollText{
+  max-height:150px;
+  overflow:auto;	
+}
+
+.status .data td, .status .data th{
+	font-weight:normal;
+	font-size:95%;
+}

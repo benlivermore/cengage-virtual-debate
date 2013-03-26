@@ -1,0 +1,24 @@
+/*  ============================================================================
+    mindtap/layout.css
+
+    Positioning of major application pieces
+    ============================================================================ */
+
+
+
+
+/* nb_Main - main page div (fixed width?) */
+.nb_main {
+	width:800px;
+	height:500px;
+	margin:0 auto;
+}
+
+/* nb_Container - outermost container */
+.nb_container {padding-top:0px; margin:0;height:100%;}
+
+
+/* ====== Dev log ====== */
+#blackbird {
+	z-index:1000;
+}

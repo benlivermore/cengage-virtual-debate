@@ -1,0 +1,276 @@
+/*  ============================================================================
+    mindtap/header.css
+
+    Main toolbar (top of window)
+    ============================================================================ */
+
+
+
+
+
+#nb_toolLayer, #nb_toolbarDiv {
+    position:absolute;
+	z-index:40;
+}
+
+/* nb_ToolPalette - extends nb_flowList - free-standing, plain toolbar. */
+.nb_toolPalette {
+	padding:0;
+}
+.nb_toolPalette li {
+	padding:0;
+	height:32px;
+	margin: 0 4px 0 0;
+}
+.nb_toolPalette a {
+	display:block;
+	padding:4px;
+	margin-right:3px;
+	background-color:#666;
+	line-height:0;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+.nb_toolPalette a:hover {
+	background-color:#005e97;
+}
+.nb_toolPalette li.lastItem {
+	margin-right:0;
+}
+.nb_welcomeMsg {
+    position:absolute;
+    font-size:85%;
+    right:54px;
+    top: 13px;
+}
+
+.nb_welcomeMsg.admin {
+    position:absolute;
+    font-size:100%;
+    right:54px;
+    top: 0px;
+}
+
+.nb_welcomeMsg .support_link.pseudofocus{
+  background-color: #424242;
+}
+
+.nb_welcomeMsg #logout_link.pseudofocus{
+  background-color: #424242;
+}
+
+.nb_toolbar .helpicondark.pseudofocus{
+  background-color: #424242;
+}
+
+
+/* nb_ToolBar - anchored toolbar; can contain nb_Palette(s) */
+.nb_toolbar {
+	background: url("/static/nb/ui/images/titlebarbg_darker.png") repeat-x scroll left top #000000;
+	color:#ccc;
+	font-weight:400;
+	height:40px;
+	padding:3px 0 0 0;
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+    box-shadow: 0 0 24px #111;
+    -moz-box-shadow: 0 0 24px #111;
+    -webkit-box-shadow: 0 0 24px #111;
+}
+.nb_nav_inner {
+	height: 100%; position: relative;
+}
+.nb_toolbar .nb_toolbarTitle {
+	font-size:75%;
+	padding-top:0;
+	color:#eee;
+}
+/* TODO mjh 20111212: redundant: same as our defult link color, remove this */
+.nb_toolbar a:link,
+.nb_toolbar a:visited {
+	color:#58BCEB;
+}
+
+/* ============ LPN Curve & Launcher ============ */
+.nb_toolbar .nb_tab {
+  position:absolute;	
+  left:50%;
+  top:0px;
+  margin-left:-27px;
+
+    width:55px;
+    height:41px;
+    
+    display: block;
+}
+
+.nb_toolbar .nb_tab:hover{
+    
+    display: block;
+}
+.nb_toolbar .nb_search {
+  position: absolute;
+  right: 300px; /* TODO this needs to be relative to welcome message, to not overrun long usernames! */
+  top: 6px;
+}
+
+#nb_lpLauncher {
+   position:absolute;	
+   top:-2px;
+   left:50%;
+    width:70px;
+    height:50px;
+   margin-left:-35px;
+   display: block;
+   z-index: 205;
+   background-image: url('/static/nb/ui/images/home_tab.png');
+   background-position: 8px 0;
+   background-repeat: no-repeat;
+}
+
+#nb_lpLauncher:hover, #nb_lpLauncher.pseudofocus{
+    background-image: url('/static/nb/ui/images/home_tab_over.png');
+}
+
+
+#nb_lpToggleIcon {
+    width:36px;
+    height:25px;
+    margin-top: 42px;
+    margin-left: 80px;
+    background-image: url('/static/nb/ui/images/lpn/close_off.png');
+}
+
+#nb_lpToggleIcon.nb_lp_up {
+    background-image: url('/static/nb/ui/images/lpn/close_off.png');
+}
+#nb_lpToggleIcon.nb_lp_down {
+    /*background-position: -34px 0;*/
+    background-image: url('/static/nb/ui/images/lpn/home_off.png');
+}
+#nb_lpToggleIcon:hover,
+#nb_lpToggleIcon.nb_lp_up:hover {
+    /*background-position: -68px 0; */
+    background-image: url('/static/nb/ui/images/lpn/close_on.png');
+}
+#nb_lpToggleIcon.nb_lp_down:hover {
+    background-image: url('/static/nb/ui/images/lpn/home_on.png');
+}
+
+#nb_lpToggleIcon:hover #nb_curve_img {
+   background-image: url('/static/nb/ui/images/curve_logo_hover.png');
+}
+
+#nb_lpLauncher:hover .nb_logo {
+    background-image: url('/static/nb/ui/images/MindTap_logo_hover.png');
+}
+
+.nb_logoBox {
+    position:absolute;	
+    top:-5px;
+    left:0px;
+    width:501px;
+    display: block;
+    z-index: 102;
+    cursor:pointer;
+}
+
+.nb_logoBox.pseudofocus{
+    background-color: #424242;
+}
+
+.nb_logo {
+    width:207px;
+    height:48px;
+    background-image: url('/static/nb/ui/images/MindTap_logo.png'); background-repeat: no-repeat;
+}
+.toolbar_discipline{
+    margin: 0 0 -13px -55px;
+}
+.nb_logoBox.admin {
+    position:absolute;	
+    top:-5px;
+    left:0px;
+    width:207px;
+    height:76px;
+    display: block;
+    z-index: 102;
+}
+
+#nb_lpLauncher:hover .nb_logo,
+#nb_lpToggleIcon:hover .nb_logo {
+    background-image: url('/static/nb/ui/images/MindTap_logo_hover.png');
+}
+
+.mindtap_ident {
+    position:absolute;
+    top:4px;
+}
+
+.nb_nextBookTitle {
+	padding:0;
+	margin:0;
+	left: 50px;
+	position: absolute;
+    cursor:pointer;
+}
+
+.nb_nextBookTitle a:hover {
+    text-decoration:none;
+}    
+
+.nb_nextBookTitle h1 {
+	color:#fff;
+	font-size:100%;
+	line-height:1.2;
+	font-weight:600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+	padding-top: 5px;
+}
+img#info {margin-left: 5px;}
+.nb_edition {
+    font-weight: normal;
+    color:#bbb;
+    font-size:90%;
+    line-height: 1.5em;
+}
+
+.nb_nextBookTitle.admin {
+	color:#58BCEB;
+	font-size:150%;
+	line-height:1.0;
+	font-weight:bold;
+	padding:0;
+	margin:8px auto 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	left: 50%;
+	position: absolute;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+	margin-left:-100px;
+}
+
+
+.nb_toolbar .nb_toolPalette {
+	position:absolute;
+	right:-22px;
+	top:0px;
+	width:100px;
+}
+
+.nb_toolbar #help{
+	position:absolute;
+	top:8px;
+	right:11px;
+	font-size:18px;	
+}
+
+

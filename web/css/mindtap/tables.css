@@ -1,0 +1,79 @@
+/*  ============================================================================
+    mindtap/tables.css
+
+    Data table styles
+    ============================================================================ */
+
+
+
+/* ====== Tables ====== */
+
+.data {
+	padding: 20px;
+	position:relative;
+	zoom:1;
+	vertical-align: top;
+}
+
+.data table {
+	width:100%;
+	border:1px solid #AE0345;
+}
+
+th, td{vertical-align:top;border:none;}
+.txtC, .data .txtC td, .data .txtC th{text-align:center;}
+.txtL, .data .txtL td, .data .txtL th{text-align:left;}
+.txtR, .data .txtR td, .data .txtR th{text-align:right;}
+.txtT, .data .txtT td, .data .txtT th{vertical-align:top;}
+.txtB, .data .txtB td, .data .txtB th{vertical-align:bottom;}
+.txtM, .data .txtM td, .data .txtM th{vertical-align:middle;}
+.data th,.data td{padding:3px 20px}
+.data thead tr{background-color: #fff0f8;}
+.data th{color: #000; font-weight:bold}
+
+/* mods to data class */
+.data {padding:10px 10px 0 10px;}
+.data table {border:none;}
+.data th, .data td {
+    padding:5px 10px 5px 0;
+    font-size:100%;
+    line-height: 1.3em;
+}
+.data thead tr {background-color:transparent;}
+.data th[scope="row"] {color:#12b0d6;font-weight:normal;}
+.data th[scope="col"] {color:#999;font-weight:bold;}
+
+/* increase specificity to override cell padding for indents */
+.data td.nb_indent {
+    padding-left:24px;
+}
+
+/* Styles for specific kinds of data in table columns */
+.nb_select_col {width:1%;}
+.nb_title_col {width:50%;}
+.nb_type_col {}
+    
+
+/* specification table - extends data table */
+.spec{padding:10px;}
+.spec table{
+	border-top: 1px solid #e2e2e2;
+	border-bottom-color:#fff;
+	border-left:none;
+	border-right:none;
+}
+.spec th, .spec td{border:1px solid #e2e2e2; border-width: 1px 0; padding-left:0;}
+.spec .odd, .spec .even{background-color: #fff;}
+
+
+
+.doc_display{
+	padding:0px;
+	margin:20px;
+	top:0px!important;
+	left:0px!important;
+	right:0px;
+	bottom:0px;
+	overflow:auto;
+}
+.doc_display .enlargetable{display:none;}

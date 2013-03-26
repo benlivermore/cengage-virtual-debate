@@ -1,0 +1,82 @@
+/*  ============================================================================
+    mindtap/space.css
+
+    Basic Typographical styles
+    ============================================================================ */
+
+
+/* ====== Basic spacing around objects ====== */
+/* TODO: 1. move other components outside spacing here.
+         2. convert padding to martgin when newer oocss is in place */
+             
+.co,        /* generic block=level content object */
+.buttons {  /* button group */
+    padding:10px;
+}
+
+.tight {
+    padding:0;
+    margin:0;
+}
+
+
+/* ======== Alignment ======== */
+.nb_floatLeft {float:left; margin-right:10px;}
+.nb_floatRight {float:right; margin-left:10px;}
+
+
+/* ======== Layout ======== */
+/* clear floats */
+.nb_clear {clear:both;}
+.nb_inline {display:inline;}
+.nb_nowrap {white-space:nowrap;}
+
+
+/* ====== Exceptions ====== */
+
+.oo_prm {padding-right:10px;}
+.oo_mtn {margin-top:0px;}
+
+/* for content objects */
+.nb_snap,.snap {padding-top:0;}
+.nb_snapLeft {padding-left:0;}
+.nb_snapRight {padding-right:0;}
+.nb_flushTop {padding:0 0 10px 0;}
+.nb_flushBottom {padding:0 0 10px 0;}
+
+/* for containers */
+.nb_snapC {margin-top:0;}
+.nb_snapLeftC {margin-left:0;}
+.nb_snapRightC {margin-right:0;}
+.nb_flushTopC {margin:0 0 10px 0;}
+.nb_flushBottomC {margin:0 0 10px 0;}
+
+/* bump - move element down a little more */
+.nb_bump {padding-top:20px;}
+
+/* grav - "gravitate" - remove 1/2 the top spacing to strengthen associations */
+.nb_grav {padding-top:0px;margin-top:5px;}
+
+/* increase vertical space to weaken association */
+.nb_begin {margin-top:30px;}
+.nb_end {margin-bottom:30px;}
+
+/* NB_Group - use to separate groups of inline items */
+/*   OR use as an inner column element to provide padding (gutter) */
+/* TODO: normalize these */
+.nb_group {margin-left:10px;}
+/* group - separates a horizontal group of inline items from subsequent items on the same line */
+.group {margin-right:1em;}
+
+.nb_groupBorder {margin-left:10px; border-left:1px solid #ccc;}
+.nb_bottomBorder {margin-bottom:10px; border-bottom:1px solid #ccc;}
+
+/* .nb_indent: Horiz. indent levels */
+.nb_indent_half {padding-left:12px;}
+.nb_indent {padding-left:24px;}
+.nb_indent2 {padding-left:48px;}
+.nb_indent3 {padding-left:72px;}
+.nb_indent4 {padding-left:96px;}
+
+.nb_indentRight {padding-right:24px;}
+

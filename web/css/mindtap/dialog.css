@@ -1,0 +1,65 @@
+/*  ============================================================================
+    mindtap/dialog.css
+    Taylor Hayward
+    Dialog styles
+    ============================================================================ */
+
+
+.sd-dialog{
+  border: 1px solid black;
+  padding: 20px;
+  background-color: #333;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.sd-dialog .heading{
+  font-size: 130%;
+  color: #afcc4e;
+  font-weight: bold;
+  display: inline-block;
+  height: 25px;
+  vertical-align: top;
+  margin: 1px 0 0 0;
+}
+
+.sd-dialog .heading-icon{
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+
+.sd-dialog .close{
+  float: right;
+}
+
+
+.sd-dialog .contents{
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ebebeb;
+  margin: 4px 0 0 0;
+}
+
+.sd-dialog .dialog_buttons{
+  margin: 14px 0 5px 0;
+}
+
+
+.dialog_buttons{
+  position: absolute;
+  bottom: 22px;
+}
+
+.field_wrapper{
+  display: inline-block;
+}
+
+HTML, BODY{
+  background-color: transparent;
+}
+
+
+
+

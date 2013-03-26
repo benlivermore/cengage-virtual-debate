@@ -1,0 +1,73 @@
+/*  ============================================================================
+    mindtap/misc-temp.css
+
+    These styles need a home!
+    ============================================================================ */
+
+
+/* short identifier - TODO: is this used? */
+.tag {
+    margin-right:0.25em;
+    background:#ff8a1b;
+    font-size:60%;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:#fff;
+    padding:2px;
+    border-radius:2px;
+    position:relative;
+    top:-2px;
+}
+
+/* informational dialog - TODO: is this used? */
+.card {}
+.card h3 {color:#000;font-weight:bold;font-size:130%;}
+.card h4 {font-size:100%;font-weight:bold;}
+
+span.parent { color: #777; }
+
+/* category aggregator stuff -- belongs in admin? */
+.nb_category_aggregator {overflow: hidden; position: fixed; height: 65px; float: none; top: 0; z-index: 1000;}
+
+/* TODO: where does this go? */
+/* TODO: This is a very specific override for inlineActivity, should abstract this out better */
+.inlineActivity .outcomeHead{
+	padding:10px 10px 6px 10px;
+	margin-bottom:10px;
+	border-bottom:1px solid #ccc;
+	font-size:11px;
+}
+.inlineActivity .outcomeHead h3{
+    color: #333333;
+    font-family: Helvetica,Arial,Sans-serif;
+    font-size: 133%;
+    font-variant: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 6px;
+}
+.inlineActivity .outcomeList{
+	font-size:12px;
+	padding:0 10px 10px 10px;
+}
+.inlineActivity .outcomeList h4{
+    color: #333333;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+.inlineActivity .outcomeList ul{
+	margin:0;
+}
+.inlineActivity .outcomeList li{
+	list-style:none;
+    font-family: Helvetica,Arial,sans-serif;
+	font-size:90%;
+}
+.inlineActivity .outcomeList li a{
+    cursor:pointer;
+}
+.outcomeList li span.badScore{
+    color:red;
+    font-weight: bold;
+}

@@ -1,0 +1,45 @@
+/*  ============================================================================
+    mindtap/accessibility.css
+
+    Accessibility-related styles
+    ============================================================================ */
+
+
+/* 
+	basic focus style 
+*/
+.pfocus_ring_on .pseudofocus {
+	outline:1px solid #178DB2;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+/* Hide content from browsers AND screen readers */
+.nb_hidden {display:none;}
+
+/* hide content from browsers, but not from screen readers */
+/* Don't use class name "access" -- triggers a JAWS bug -- should be phased out */
+/* TODO MJH 20120302: replace this with Kellum replacement technique for better performance */
+.access, .access p, .access li .access span,
+.novisual, .novisual p, .novisual li, .novisual span {
+    position:absolute;
+    text-indent:-9999px;
+}
+
+.a11y-mode-fix {
+    position: fixed;
+    left: -10px;
+    height: 1px;
+    width: 1px;
+}
+
+.accessibility-module {
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: fixed;
+	top: 200px;
+	left: -10px;
+}
+

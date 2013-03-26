@@ -1,0 +1,138 @@
+/*  ============================================================================
+    mindtap/widgets.css
+
+    Shared components for MindApps:
+    ------------------------------
+    App Toolbar
+    Segmented buttons
+    Spinners
+    
+    ============================================================================ */
+
+
+/*  ============================================================================
+    highlight for accessibility ereader online
+    ============================================================================ */
+
+
+.reader_highlight{
+    position: absolute;
+    top: -55px;
+    left: 0px;
+    right: -2px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+
+
+/*  ============================================================================
+    mindtap/appToolbar
+    ============================================================================ */
+
+.appToolbar {
+  background: url('/static/nb/ui/images/myContentBar.png') 0 0 repeat-x;
+  padding: 0px;
+  min-height:32px;
+}
+
+/* Google docs frames */
+/* TODO MJH 20120209 - Determine if these need be moved to google-specific stylesheet */
+#appiframeid {
+    height: 100%
+}	
+#appdivid {
+    width: 100%;
+    position: fixed;
+    top: 65px;
+    bottom: 0;
+}
+#helpdivid {
+    margin: 40px 80px 40px 80px;
+    line-height: 22px;
+    position: absolute;
+    overflow-y: auto;
+    top: 60px;
+}
+
+
+
+
+/*  ============================================================================
+    mindtap/segmented
+
+    Segmented selection widget (multiple buttons in a single widget, work like radio buttons)
+    ============================================================================ */
+
+
+.nb_segmented {
+    padding:12px 0;
+    margin-left:1px;
+}
+
+.nb_segmented .nb_option {
+    font-size:90%;
+    background: #f4f4f4 url('/static/nb/ui/images/control_unselected.png') repeat-x;
+    border:1px solid #999;
+    padding:4px 8px;
+    color:#555;
+    margin-left:-1px;
+}
+
+.nb_segmented .nb_selected {
+    color:#222;
+    font-weight:bold;
+    background: #87D4FD url('/static/nb/ui/images/control_selected.png') repeat-x;
+}
+
+.nb_segmented .nb_option:first-child {
+    border-top-left-radius:6px;
+    border-bottom-left-radius:6px;
+    -moz-border-radius-topleft:6px;
+    -moz-border-radius-bottomleft:6px;
+}
+
+.nb_segmented .nb_option:last-child {
+    border-top-right-radius:6px;
+    border-bottom-right-radius:6px;
+    -moz-border-radius-topright:6px;
+    -moz-border-radius-bottomright:6px;
+}
+
+
+
+/*  ============================================================================
+    mindtap/spinners
+
+    Waiting/loading animations
+    ============================================================================ */
+
+
+
+
+.app_frame_spinner {
+	background-color: transparent; 
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	padding-top: 25%;
+}
+
+.app_frame_spinner > img { 
+	position: relative; 
+	margin-left: auto; 
+	margin-right: auto; 
+	display: block;
+}
+
+.nb_loading{
+  margin:48px auto 0 auto;	
+  text-align:center;
+  color:#999;
+}
+.nb_loading img{
+  display:block;	
+  margin: 0 auto 8px auto;
+}

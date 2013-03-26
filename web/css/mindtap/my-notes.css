@@ -1,0 +1,74 @@
+/* Styles for the My Notes category app (top frame) */
+
+.nb_category_aggregator {
+    /* unprefixed but needs to apply to this view only */
+    position:static;
+    height:65px;
+}
+
+.my_notes {
+        background:#fff url('/static/nb/ui/images/my-notes/wood-grain.jpg');
+        height:65px;
+        padding: 19px 16px 0;
+    }
+    
+    .my_notes .my_notes_tab {
+        color:#666;
+        text-shadow:1px 1px 1px #fff;
+        -moz-text-shadow:1px 1px 1px #fff;
+        width:195px; height:25px;
+        padding-top:20px;
+        text-align:center;
+        background:transparent url('/static/nb/ui/images/my-notes/tab-inactive.png') 0 0 no-repeat;
+        position:relative;
+        font-size:115%;
+    }
+    .my_notes .my_notes_tab:hover,
+    .my_notes .my_notes_tab:focus {
+            text-decoration:none;
+            color:#000;
+    }
+        
+    .my_notes .my_notes_tab, .my_notes .tabset {
+        display:inline-block;
+    }
+    
+    .my_notes #previd, .my_notes #nextid {
+        display:inline-block;
+        position:relative;
+        top:7px;
+    }
+    
+    .my_notes .my_notes_active_tab {
+        color:#333;
+        background:transparent url('/static/nb/ui/images/my-notes/tab-active.png');
+    }
+    
+    .my_notes .tabset {
+        margin-left:56px;
+    }
+    
+        .my_notes .tabset .my_notes_tab {
+            margin-left:-56px; /* tab overlap */
+        }
+    
+    
+#helpdivid {
+    background: #f3f3f3 url('/static/nb/ui/images/my-notes/spiral.jpg') 0 0 repeat-y;
+    min-height:1000px;
+    margin:0;
+    padding:40px 80px;
+    top:64px;
+}    
+
+#appdivid {
+    top:64px;
+}
+
+#imgPatch {
+    width:50px;
+    height:28px;
+    background: transparent url('/static/nb/ui/images/my-notes/spiral-patch2.png');
+    position:absolute;
+    top:64px;
+}

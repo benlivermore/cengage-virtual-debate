@@ -1,0 +1,165 @@
+/*  ============================================================================
+    mindtap/accessibility.css
+
+    Builder styles
+    ============================================================================ */
+
+
+
+
+.builderPage{
+  overflow:auto;
+}
+
+.builderPage .searchbar{
+  margin:12px 0;
+}
+
+/* LP Creator */
+#nb_pathCreator {
+}
+
+/* LU Creator */
+#nb_unitCreator {
+}
+#nb_unitCreatorLink, .nb_activity_add, .nb_unit, .nb_activity, .nb_path, .switchPath, .nb_activity_menu_action {
+  cursor:pointer;
+}
+
+.lpn_node .nb_edit{
+  margin: 0;
+}
+
+.lpn_node div.badScore {
+	color: red;
+	font-weight: bold;
+}
+
+.lpn_node .clui-edit, .lpn_node .clui-delete{
+  display: inline-block;
+}
+
+.nb_mindlink{
+  margin-left: 63px;
+}
+
+.selectTable{
+  margin:4px 12px;
+}
+.selectTable td{
+  padding:8px 4px;
+  border:0;
+}
+
+div.divOverlay{
+  width:100%;
+  height:100%;
+  background-color:#333;
+  z-index:1000;
+  opacity:.9;
+  position:fixed;
+  top:0;
+  left:0;
+  text-align:center;
+}
+div.divOverlay img{
+  position:absolute;
+  top:30%;
+  left:50%;
+  margin-left:-70px;
+}
+
+.activityName {
+    font-weight:600;
+    color:#222;
+}
+.appName {
+    font-size:80%;
+    color:#888;
+}
+.activityDescription {
+    font-size:110%;
+    font-style:normal;
+    color:#444;
+    padding-left:10px;
+    padding-top: 15px;
+}
+
+
+/* admin controls */
+.nb_edit {
+    float:right;
+    margin:5px 0px 0 5px;
+    width: auto;
+    display:none;
+    display:block\0/; /* IE fix for focus - tools will always be visible rather than on hover */
+}
+.nb_edit a{
+    /* TODO 20110331 - Should eliminate need for !important declarations */
+    font-size:125%!important;
+    color:#779999!important;
+    font-weight:bold;
+}
+.nb_unit:hover .nb_edit, .nb_activity:hover .nb_edit, .switchPath:hover .nb_edit {display:block;}
+.nb_add a {
+    font-size:125%;
+    display:block;
+    padding-left:80px;
+}
+.nb_add:hover{background-color:#000;}
+/* nb_buttons - extends nb_flowList - A set of links rendered as buttons (<ul>) */
+/* padding on the link to maximize clickable area */
+.nb_buttons {padding:10px;}
+.nb_buttons > li {padding:0;}
+.nb_buttons > li a {
+	padding: 5px 20px;
+	border:1px solid #ddd;
+	background-color:#eee;
+}
+.nb_returnbutton, .nb_returnbutton:link{
+  background:url(/static/nb/ui/images/arrow_return.png) no-repeat 4px 4px #efefef;
+  padding:4px 8px 4px 18px;
+  border-radius:4px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  text-decoration:none;
+  font-size:90%;
+}
+.nb_returnbutton:hover{
+  background-color:transparent;
+  text-decoration:underline;
+}
+
+/* Distinct Activities */
+#distinct_activity_manager{
+	bottom:20px;
+	overflow:hidden;
+	padding:0;
+	width:770px;
+	height:auto!important;
+}
+#distinct_activity_manager .activities{height:100%;}
+#distinct_activity_manager .buttons{
+	position:absolute;
+	bottom:0;
+}
+#distinct_activity_manager .activityEdit .buttons{
+    position:static;
+}
+#distinct_activity_manager .scrollDiv{
+	bottom:40px;
+}
+.activityCreate{
+  position:absolute;
+  top:0;left:0;bottom:0;right:0;
+}
+.activityEdit{
+  position:absolute;
+  top:0;left:0;bottom:0;right:0;
+  overflow:auto;
+}
+
+.activityCreate .createFrame{
+  position:absolute;
+  top:80px;left:0;bottom:30px;right:0;
+}

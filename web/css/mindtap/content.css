@@ -1,0 +1,177 @@
+/*  ============================================================================
+    mindtap/content.css
+
+    Basic Typographical styles
+    ============================================================================ */
+
+
+
+/* ====== Body styles ====== */
+body {
+	font-family:"Facitweb",Calibri,Arial,Sans;
+	color:#333;
+	margin:0;
+	padding:0;
+	font-size:12.5px;
+	line-height:1.231;
+    font-weight:400;
+}
+
+html,body {
+    background-color: #fff;
+	height:100%;
+}
+
+body.nb_body {
+  background: #1e1d1b url(/static/nb/ui/images/blackboard.jpg) repeat-x top left;	
+}
+
+/* **************** CONTENT OBJECTS ***************** */
+/* ====== Default spacing ====== */
+ul, ol, dl, p, blockquote {padding:10px;}
+h1, h2, h3, h4, h5, h6 {padding:10px 10px 0 10px;}
+
+pre {margin: 10px;}
+table h1, table h2, table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl {padding:0;}
+/* ====== Elements ====== */
+em {font-style: italic;}
+strong {font-weight:600;}
+hr {border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10px;}
+code {color:#0B8C8F;}
+
+.nobreak {white-space:nowrap;}
+
+/* ====== Headings ====== */
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, .h1{font-size:166%; font-weight:400; font-style: normal; color:#B6D846;}
+h2, .h2{font-size:150%; font-weight:400; font-style: normal; color:#666;}
+h3, .h3{font-size:125%; font-weight:400; font-style: normal; color:#333;}
+h4, .h4{font-size:112%; font-weight:400; font-style: normal; color:#333;}
+h5, .h5{font-size:100%; font-weight:600; font-style: normal; color:#c60;}
+h6, .h6{font-size:100%; font-weight:400; font-style: italic; color:#333;}
+/* if additional headings are needed they should be created via additional classes, never via location dependant styling */
+
+/* ====== Specialized Headings ====== */
+.nb_section_title {color:#c60;}
+
+.book_ISBN h4 {
+    font-size:90%;
+    font-weight:bolder;
+}
+
+.warning {color:#e97d0b; text-transform:uppercase;}
+
+
+/* ====== Misc. Text Roles ====== */
+.category{
+    font-size:87%;
+    font-weight:normal;
+    font-style: normal;
+    text-transform:uppercase;
+    color: #333;
+}
+.nb_help {
+	font-weight:normal;
+	color:#888;
+    font-size:110%;
+    font-family: "Droid Serif",Georia,Times,Serif;
+}
+.caption {font-size:87%;}
+.detail {
+    font-size:87%; 
+    color:#666;
+}
+.detail{color: #777; font-size:100%;display:block;}
+
+
+/* ====== Links ====== */
+a, a:visited {color: #008CD2; text-decoration: none;}
+a:focus, a:hover {text-decoration: underline;}
+
+.category a{
+    color: #333;
+}
+.important a{
+    font-size:116%;
+    font-weight:normal;
+}
+
+
+/* ====== Emphasis ====== */
+.nb_special {font-weight:bold; color:#DF7C08;}
+
+
+/* ====== Rules ====== */
+hr {margin:0 10px;
+    border-bottom-width:2px;
+}
+
+
+/* ====== Images ====== */
+.nb_icon, .nb_iconLink {
+    display:inline;
+    vertical-align:middle;
+    margin-right:4px;
+}
+
+/* ====== image treatments ====== */
+.caption{
+    font-size:87%;
+    color:#666666;
+    font-style:italic;
+    padding-top:0;
+}
+
+/* ====== blockquote ====== */
+cite{display:block; text-align:right; padding-top: 10px;}
+
+/* ====== callout ====== */
+.callout{font-size:189%;color:#999999; font-style:italic;}
+.callout cite{display:block; text-align:right;padding-top: 30px; font-size:69.25%;}
+.callout span.quot{font-size: 500%; vertical-align: sub; color:#e2e2e2; line-height:25px; font-weight:bold;}
+.callout span.quotLast{vertical-align:middle;}
+
+
+/* ====== Containers ====== */
+
+/* nb_Box - simple container */
+.nb_box,.box {
+	background-color:#ddd;
+	margin:10px;
+}
+
+label.error{
+    display:inline;
+    color:#fe8003;
+    margin-left: 10px;
+    clear:none;
+    font-size:85%;
+}
+
+
+
+/* Media object (modified from oocss) */
+.oo_media{overflow:hidden; overflow:visible; zoom:1;margin: 1px 4px;}
+.oo_media .img{float:left;margin-right: 10px;}
+.oo_media .img img{
+    display:block;
+    padding:15px 0 0 15px;
+    width: 35px;
+}
+.oo_media .imgExt{float:right; margin-left: 10px;}
+
+
+/* ====== OOCSS overrides ====== */
+/* re-enable the <b> tag (mod.css)  */
+b {
+    display:inline;
+    font-size:inherit;
+    position:inherit;
+}
+.mod>b{
+    display:block;
+    background-repeat:no-repeat;
+    font-size:1%;
+    position:relative;
+    z-index:10;
+}

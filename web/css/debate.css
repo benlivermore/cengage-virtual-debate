@@ -1,0 +1,73 @@
+body{padding:12px 24px; overflow:auto;}
+p{padding:0 10px; margin-top:0;}
+h1, h2, h3{margin-top:0;}
+.lectimg{float:left; vertical-align: middle}
+h1{
+	font-weight:bold;
+	font-size:200%;
+}
+h1 img{vertical-align:middle;}
+.step{
+	padding:18px;
+	border:1px solid #ccc;
+	margin-bottom:18px;
+}
+
+.role{
+	clear:left; 
+	margin-bottom:12px; 
+	overflow:hidden;
+	border-bottom:1px solid #ccc;
+	padding-bottom:12px;
+	background-color:#efefef;
+	padding:12px;
+	border-radius: 12px;
+}
+.rolebox{
+	background-color:#efefef;
+	padding:12px;
+	border-radius: 12px;
+}
+.role div{float:left;padding:0 12px;}
+.role div.image{100px}
+.role div.image img{width:100px;}
+.role div.name{
+	width:80px;
+	font-weight:bold;
+	font-size:120%;
+}
+.role div.desc{
+	width:40%;
+}
+.role div.desc p{
+	margin-top:0;
+}
+.role div.docs{width:150px;}
+.step .centerbuttons{text-align: center}
+
+.tabs{
+	border-bottom:1px solid #999;
+	overflow:hidden;
+	margin-bottom:8px;
+	border-left:1px solid #999;
+}
+.tab{
+	border:1px solid #999;	
+	border-left:0;
+	padding:8px;
+	font-weight:bold;
+	font-size:130%;
+	background-color:#eee;
+	float:left;
+	margin-bottom:-1px;
+}
+.tab a{
+	color:#666;
+}
+.tabs .active{
+	background-color:#fff;
+	border-bottom:1px solid #fff;
+}
+.tabs .active a{color:#008CD2;}
+
+.tab2{display:none;}

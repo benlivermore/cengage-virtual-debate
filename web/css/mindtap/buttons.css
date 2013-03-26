@@ -1,0 +1,66 @@
+/* ============================================================================ */
+/* mindtap/buttons.css */
+/* ============================================================================ */
+
+
+/* Button group */
+.buttons.right {float: right;}
+
+.submitActivityButton{
+	position:absolute;
+	right:20px;
+	bottom:5px;
+}
+
+/* TODO multiple versions of this button design across apps, should consolidate them into this stylesheet */
+.inlineSubmitActivityButton, .inlineSubmitActivityButton:visited{
+    float:right;
+    margin: 0;
+    font-size:90%;
+    background-color:#1a85c2;
+    color:#fff;
+    width:auto;
+    text-decoration: none;
+    padding:.1em 1em;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    border:none;
+    cursor:pointer;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    font-weight: bold;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#13b2f1), to(#1879b1));
+    background-image: -moz-linear-gradient(0 100% 90deg, #1879b1, #13b2f1);
+}
+.inlineSubmitActivityButton:hover{
+    background-color:#1b82be;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#13b2f1), to(#166a9b));
+    background-image: -moz-linear-gradient(0 100% 90deg, #166a9b, #13b2f1); 
+    -webkit-box-shadow: 0px 0px 12px rgba(51, 204, 255, .8);
+    -moz-box-shadow: 0px 0px 12px rgba(51, 204, 255, .8);
+    box-shadow: 0px 0px 12px rgba(51, 204, 255, .8);
+    text-decoration: none;
+}
+
+.submitReview{
+	text-align:center;
+	margin:60px 0 0 0;
+	color:#aaa;
+}
+.submitReview .scoreDisplay{
+    color:#CC6600;
+	font-size:120%;
+	font-weight:bold;
+	background-color:#efefef;
+	border:1px solid #ccc;
+	padding:12px;
+	margin:18px auto 12px;
+	width:300px;
+}
+.submitReview .submissionButton{
+	margin:30px 0 18px;
+}
+

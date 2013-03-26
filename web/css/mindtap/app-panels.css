@@ -1,0 +1,139 @@
+/*  ============================================================================
+    mindtap/app-panels.css
+
+    App styles for App panel, header (elements outside the app frame)
+    ============================================================================ */
+
+
+/* App frames + containers */
+
+#appFrames{
+	position:absolute;
+	left:0;
+	top:55px;
+    right:0;
+	bottom: 0px;
+}
+
+.ereader_iframe{
+	margin-left: 1px;
+}
+
+.nb_activityBar{
+	margin-left: 1px;
+}
+
+.nb_currentApp{
+	z-index:20;
+}
+
+.nb_app iframe,.nb_app div.nb_native_app {
+	height:100%;
+	width:100%;
+	border:0;
+	box-shadow: 0 0 14px #000;
+	-moz-box-shadow: 0 0 14px #000;
+	-webkit-box-shadow: 0 0 14px #000;
+	*border:2px solid #000;
+}
+
+.appActivity iframe {
+	border:0;
+}
+
+#nb_mainIframe {
+  border:0;
+  -moz-box-shadow: 0px  0px 5px #666;
+  -webkit-box-shadow: 0px 0px 5px #666;
+  box-shadow: 0 0 4px #666;
+}
+
+.nb_app {
+	display:none;
+	position:absolute;
+	top:8px;
+	right:53px;
+}
+
+.nb_app.nb_dockItem {
+    position:static;
+    display:block;
+}
+
+.nb_overlay .nb_app_buttons {
+	display:inline;
+}
+
+.nb_appTitleBar {
+	position:relative;
+	padding:4px 5px 4px 8px;
+	color:#fff;
+	font-weight:bold;
+	text-shadow: 0 0 12px #000;
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.7);
+}
+
+.pseudofocus .nb_appTitleBar {
+  background-color: #424242;
+}
+
+.nb_app_buttons{
+	float:right;
+	font-weight:300;
+	font-size:110%;
+/*	right:0px;
+	top:-2px;*/
+}
+
+.nb_panelName {
+    font-size:100%;
+    font-weight:600;
+    color:#eee;
+    padding-right:8px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 3px
+}
+
+.nb_panelName.pseudofocus {
+  background-color: #424242;
+}
+
+.miniAppIcon {
+    width: 16px;
+    margin: 2px 2px 0 0;
+}
+.hideApp:link, .hideApp{
+  background: url(/static/nb/ui/images/closeIcons.png) no-repeat 0px 0px transparent;
+  width:20px;
+  height:20px;
+  display:block;
+}
+.hideApp:hover, .hideApp.pseudofocus {
+background-position: 0px -20px;
+}
+
+.appActivity{
+	position:absolute;
+    top:56px;
+    bottom:0px;
+    left:45px;
+    right:45px;
+	max-width:960px;
+    min-width:800px;
+}
+.appActivity.Reader{
+    max-width:800px;
+	left:0;
+	right:0;
+}
+
+.nb_app .nb_native_app {
+	background: #212121;
+}
+
+.nb_search .nb_search_form .active-search.pseudofocus{
+  background-color: #fff;
+}
+

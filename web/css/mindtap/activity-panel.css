@@ -1,0 +1,139 @@
+/*  ============================================================================
+    mindtap/activity-panel.css
+
+    Activity panel and header (elements outside the activity iframe)
+    ============================================================================ */
+
+
+
+
+.nb_activityLayer {
+   max-width:1024px;
+   min-width:800px;
+   position:relative;
+   z-index:10;
+   bottom:0;
+}
+.nb_activityBar {
+    background-color:#000;
+    background-color:rgba(0,0,0,0.7);
+    padding:4px 8px;
+    position:absolute;
+    bottom:0;  
+    left:0;
+    right:0;
+    min-height:33px;
+}
+.nb_activityBar  .closeActivity{
+  position:absolute;
+  top:4px;
+  right:5px;
+  background: url(/static/nb/ui/images/closeIcons.png) no-repeat -20px 0px transparent;
+  width:20px;
+  height:20px;
+
+}
+.nb_activityBar  .closeActivity:hover{background-position: -20px -20px;}
+
+
+.Reader .nb_activityBar,
+.Media .nb_activityBar {
+    /* Shift activity title over when it's a Reading or Media activity */
+    padding-left:50px;
+}
+
+.nb_activityBar, .nb_appTitleBar {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+.nb_activityBar .nb_actBar_actions{
+  margin:12px 0 0 12px;
+}
+.nb_actBar_actions a{
+  background-color:#FFFFFF;
+  border:1px solid #CCCCCC;
+  color:#46A3CB;
+  font-size:75%;
+  font-weight:bold;
+  padding:4px 8px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+
+.nb_titles{
+   position:absolute;
+   bottom: 5px;
+   width: 99%;
+}
+.nb_readingActivity .nb_titles{
+  left:93px;
+}
+.nb_actTitle{
+  color:#57b4dc;
+  font-size:105%;
+  font-weight:600;	
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:none;
+  margin:0;
+  width:670px;
+}
+
+.nb_actTitle .MathJax_SVG svg g, 
+  .nb_actTitle .MathJax_SVG_Display svg g { 
+  fill: #57b4dc; 
+  stroke: #57b4dc; 
+}
+.nb_actTitle .MathJax_SVG, 
+  .nb_actTitle .MathJax_SVG_Display{ 
+  font-size: 80%;
+}
+
+/* don't show app titlebar if is an activity */
+.appActivity .nb_appTitleBar,
+.appActivity .nb_app_buttons {
+	display:none;
+}
+
+.nb_activityBar .nb_bookCover img{
+  max-width:35px;
+  max-height:45px;
+  float:left;
+  padding-right:5px;
+}
+
+.nb_activityBar .nb_bookTitle{
+  color:#ddd;
+  font-size:90%;
+  width: 80%;
+}
+
+.nb_activityBar .nb_bookInfo{
+  display:none;
+  left:40%;
+  top:16px;
+}
+.nb_activityBar .nb_bookData{
+  padding:4px 8px;
+}
+.nb_activityBar .nb_bookData .nb_bookTitle{
+  font-size:110%;
+  font-weight:600;
+  color:#555;
+  margin-bottom:3px;
+}
+.nb_activityBar .nb_bookData .nb_bookAuthor{
+  font-size:90%;
+  color:#555;
+  margin-bottom:3px;
+  font-weight:100;
+}
+.nb_activityBar .nb_bookData .nb_bookEdition{
+  font-size:85%;
+  color:#555;
+  font-weight:100;
+}
+
+

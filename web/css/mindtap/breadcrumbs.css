@@ -1,0 +1,95 @@
+/*  ============================================================================
+    mindtap/breadcrumbs.css
+
+    Breadcrumbs (LPN, etc)
+    ============================================================================ */
+
+
+
+/* LPN Header: Path-Unit-Action */
+.nb_fullPath {
+    font-size:100%;
+    padding-top:0px;
+    height: 1.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:none;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    background: #2d2d2d;
+    margin: 5px 23px 18px 12px;
+	padding-left:6px;
+}
+.nb_fullPath .linkback,
+.breadcrumb .back {
+    color:#58BCEB;
+    cursor: pointer;
+    font-weight:lighter;
+    height: 1.2em;
+    max-width: 45%;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nb_fullPath .linkback:hover,
+.breadcrumb .back:hover {
+    color:#fff;
+    text-decoration:underline;
+}
+.nb_fullPath {
+    height: 29px;
+    background:#2d2d2d url('/static/nb/ui/images/home_background.png') no-repeat left top;
+
+	border: 2px solid rgb(100, 100, 100); /* default color */
+	border: 2px solid rgba(0, 0, 0, 0.3); /* rgba for transparency */
+
+}
+
+#nb_pathHome {
+    width: 40px;
+    padding: 0;
+    margin-right: 10px;
+    height: 29px;
+}
+
+#nb_pathHome img.home {
+    top: 1px;
+    vertical-align: middle;
+    position: relative;
+	margin-right:4px;
+}
+
+#nb_pathHome img.home.active {
+    cursor: pointer;
+}
+
+#nb_pathName,
+#nb_unitName, #nb_activityAction {
+    top: 4px;
+    position: relative;
+    color: #acabab;
+}
+
+#nb_lpPick .nb_icon  {
+    width:20px;
+    padding: 4px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    vertical-align:text-bottom;
+}
+
+#nb_lpPick .nb_icon:hover  {
+    background: #323232;
+}
+
+#nb_lpPick {color:#999; position:relative; left:-10px;}
+
+#nb_unitsHead {padding-top:10px;}
+
+
+
+

@@ -1,0 +1,533 @@
+/*  ============================================================================
+    mindtap/skins.css
+
+    Colors, fonts, background, etc. separated from structural styles
+    TODO: more separation needs to take place.
+    ============================================================================ */
+
+
+body.plainBody {
+    background:#fff none;
+}
+
+/* ====== Simple Boxes ====== */
+
+/* extends div or mod */
+.embossed {
+    background:#fff;
+    color:#999;
+    border-radius:5px;
+    box-shadow:2px 2px 3px #bbb;
+    margin:20px;
+    margin-top:0;
+    padding:10px;
+}
+
+/* ====== Tables ====== */
+
+/* ruled - extends data */
+.ruled th {border-bottom:1px solid #999;}
+.ruled td, .ruled th[scope="row"] {
+    font-weight:bold;
+    border-bottom:1px solid #ccc;
+}
+.ruled tr:last-child td {border-bottom-width:0;}
+.ruled table {border-bottom:1px solid #999;}
+.ruled table table {border-bottom-width:0;}
+
+/* dotted - extends data */
+.dotted td, .dotted th[scope="row"] {
+    border-top:1px dotted #ccc;
+}
+
+.banded tr:nth-child(2n){
+	background-color:#333;
+}
+.banded td, .banded th{padding-left:6px;}
+.banded th {border-bottom:1px solid #999;}
+
+/* bigbox - extends data */
+.bigbox table {
+    border:1px solid #666;
+    -webkit-box-shadow: 0 6px 12px -5px #666;
+	   -moz-box-shadow: 0 6px 12px -5px #666;
+	        box-shadow: 0 6px 12px -5px #666;
+}
+
+
+/* light background */
+
+.data.light thead tr {background-color:#ddd;}
+.data.light th[scope="row"] {color:#333;font-weight:normal; }
+.data.light th[scope="col"] {color:#333;font-weight:bold; }
+
+.banded.light table { background-color: #fff;}
+.banded.light tr {border-bottom: 1px solid #e3e3e3;}
+.banded.light tr:nth-child(2n){
+	background-color:#f3f3f3;
+	color: #333;
+}
+
+
+
+
+
+.round6bottom {
+    border-bottom-left-radius:6px;
+    -moz-border-radius-bottomleft:6px;
+    -webkit-border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    -moz-border-radius-bottomright:6px;
+    -webkit-border-bottom-right-radius:6px;
+}
+
+
+/* nb_hud - "Heads-up Display" style skin for overlays */
+.nb_hud {
+	color:#eee;
+	background: transparent url('/static/nb/ui/images/blacktrans.png'); 
+	/*background-color:rgba(0,0,0,0.7);*/
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow:0 0 15px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow:0 0 15px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow:0 0 15px rgba(0, 0, 0, 0.9);	
+}
+.nb_hud h3 {
+	font-size: 133%;
+	color:#DF7C08;
+}
+.nb_hud .light {background-color: #fff; color: #333; }
+
+.nb_hud a, .nb_hud a:link, .nb_hud a:visited,
+.builderPage a, .builderPage a:link, .builderPage a:visited
+ {
+	color:#0081BC;
+}
+
+.nb_hud .stackList a,
+.nb_hud .stackList a:link,
+.nb_hud .stackList a:visited {
+    color:#008CD2;
+}
+
+.nb_hud .title {
+    color:#555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.nb_hud .nb_groupBorder {border-left-color:#555;}
+
+.nb_navigator .nb_breadcrumbs {
+	font-size:165%;
+}
+
+
+/* nb_popup - lighter style overlays */
+.nb_popup {
+	color:#333;
+	border:2px solid #ddd;
+	background:#fff;
+}
+
+/* nb_pills - extends NB_Set */
+.nb_pills li {
+	font-family: Verdana,Arial,Sans;
+	font-size:83%;
+	color:#555;
+	padding:2px 5px;
+	margin-right:5px;
+	background-color:#cc9;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+/* Slate theme */
+.slate li {
+    background: #fff url('/static/nb/ui/images/panel_bg.jpg') left bottom repeat-x;
+    background-color:#fff;
+    min-height:80px;
+    padding:4px 4px 4px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.slate li li{
+	background:none;
+	border:0;
+	min-height:auto;
+}
+
+
+.slate .nb_activeLPNItem {
+    background: #eee url('/static/nb/ui/images/panel_bg_current.jpg') 0 0 repeat-x;
+}
+
+.slate li:hover,
+.slate li:focus {
+    background: #f4f4e4 none;
+    /*border-right: 8px solid rgb(223, 124, 8); */
+}
+.slate li li:hover, .slate li li:focus{background-color:transparent;}
+
+.nb_bookmarkLPN {
+    position: absolute;
+    right: 8px;
+    top: 0px;
+    display: none;
+}
+
+.nb_bookmarkLPN.active{
+    display: block;
+}
+
+
+.slate li.nb_add:hover,
+.slate li.nb_add:focus {
+    background: #444 none;
+}
+
+.slate .nb_thumbImage {
+	background-color:#ccc;
+	border: 1px solid #bdbcbc;
+}
+.slate h3 {
+    color:#444;
+}
+.slate li:hover h3,
+.slate li:focus h3 {
+    color:#000;
+}
+
+.slate .appName {
+    color:#888;
+}
+.slate .detail {
+    color:#555;
+}
+
+.slate .nb_add {
+    background: none;
+    background-color:#333;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: medium dashed #666;
+    margin-top: 10px;
+    padding-left:100px;
+    padding: 20px;
+    height: 50px;
+}
+ 
+.slate .nb_add a:hover,
+.slate .nb_add a:focus {
+    color:#fff;
+    text-decoration:none;
+}
+
+.slate a,
+.slate a:link,
+.slate a:visited {
+    color:#58BCEB;
+}
+.slate li.nb_add:hover a,
+.slate li.nb_add:focus a {
+    color:#fff;
+}
+
+.slate .nb_add .nb_thumbImage {
+    display: none;
+}
+
+.slate .clui-button {
+    background:none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    margin-left:0px;
+    padding:5px 5px 0 5px;
+} 
+.slate .clui-button:hover,
+.slate .clui-button:focus {
+    background:#E6E6E6;
+}
+
+/* typeList - extends nb_stackList */
+.typeList li {
+    min-height:0;
+    background: #ddd url('/static/nb/ui/images/panel_bg_short.jpg') 0 0 repeat-x;
+}
+.typeList li:hover,
+.typeList li:focus {
+    background:#fafafa url('/static/nb/ui/images/more_info.png') 40% 50% no-repeat;
+}
+
+.typeList li.nb_add:hover,
+.typeList li.nb_add:focus {
+    background:#444 none;
+}
+
+.typeList li:hover .activityDescription,
+.typeList li:focus .activityDescription {
+    display:block;
+}
+
+.typeList h3 {
+    font-size:110%;
+    color:#0081BC;
+    padding-top:15px;
+}
+
+
+
+/* buttons */
+
+input[type='button'], input[type='submit'], .buttons a, .adminButton, .buttons a:link, .buttons a:visited, .adminButton:link, .adminButton:visited {
+    font-size:85%;
+    background-color:#1a85c2;
+    color:#fff;
+    width:auto;
+    text-decoration: none;
+    padding:.5em 1em;
+    /*text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);*/
+    border: 1px solid #58BCEB;
+    cursor:pointer;
+    margin-right:12px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    font-weight: 600;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#13b2f1), to(#1879b1));
+    background-image: -moz-linear-gradient(0 100% 90deg, #1879b1, #13b2f1);
+    font-family: Facitweb, Calibri, Arial, Sans;
+}
+
+input[type='button']:hover, input[type='submit']:hover, .buttons a:hover, .adminButton:hover,
+input[type='button']:focus, input[type='submit']:focus, .buttons a:focus, .adminButton:focus {
+    background-color:#1b82be;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#13b2f1), to(#166a9b));
+    background-image: -moz-linear-gradient(0 100% 90deg, #166a9b, #13b2f1); 
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    text-decoration: none;
+    font-family: Facitweb, Calibri, Arial, Sans;
+}
+
+input[type='button'].goButton, input[type='submit'].goButton{
+	padding:.3em .7em;
+}
+
+
+input[type='button'].nb_big, input[type='submit'].nb_big, .buttons a.nb_big {
+    font-size:100%;
+}
+
+input[type='button'].nb_small, input[type='submit'].nb_small, .buttons a.nb_small, .adminButton.nb_small, a.adminButton.weak.nb_small {
+    font-size:80%;
+    padding:.2em .5em;
+}
+
+input[type='button'].weak,
+input[type='button'].weak.clui-button,
+.buttons a.weak,
+.buttons a.weak:link,
+.buttons a.weak:visited,
+a.adminButton.weak  {
+    color:#fff;
+    /*text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);*/
+    background-color:#555;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b3b2b2), to(#666));
+    background-image: -moz-linear-gradient(0 100% 90deg, #666, #b3b2b2);
+    border: 1px solid #999;
+}
+
+input[type='button'].weak:hover,
+input[type='button'].weak.clui-button:hover,
+.buttons a.weak:hover,
+a.adminButton.weak:hover,
+input[type='button'].weak:focus,
+input[type='button'].weak.clui-button:focus,
+.buttons a.weak:focus,
+a.adminButton.weak:focus {
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    background-color:#4c4b4b;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b3b2b2), to(#4c4b4b));
+    background-image: -moz-linear-gradient(0 100% 90deg, #4c4b4b, #b3b2b2);
+}
+
+
+input[type='button'].miniButton,
+input[type='submit'].miniButton,
+.buttons.miniButton a,
+.adminButton.miniButton {
+    font-size:85%;
+    padding:0.25em 0.5em;
+    margin-right:4px;
+    border:none;
+    color:#008CD2;
+    background: #c6eeff none;
+    text-shadow:none;
+}
+
+input[type='button'].miniButton:hover,
+input[type='submit'].miniButton:hover,
+.buttons.miniButton a:hover,
+.adminButton.miniButton:hover,
+input[type='button'].miniButton:focus,
+input[type='submit'].miniButton:focus,
+.buttons.miniButton a:focus,
+.adminButton.miniButton:focus {
+    color:#fff;
+    background: #0e95dc none;
+}
+
+input[type='button'].miniButton.weak,
+input[type='submit'].miniButton.weak,
+.buttons.miniButton a.weak,
+.adminButton.miniButton.weak {
+    color:#444;
+    background: #eee none;
+}
+
+input[type='button'].miniButton.weak:hover,
+input[type='submit'].miniButton.weak:hover,
+.buttons.miniButton a.weak:hover,
+.adminButton.miniButton.weak:hover,
+input[type='button'].miniButton.weak:focus,
+input[type='submit'].miniButton.weak:focus,
+.buttons.miniButton a.weak:focus,
+.adminButton.miniButton.weak:focus {
+    color:#fff;
+    background: #555 none;
+}
+
+
+.buttons a.clickDisabled {
+	background-color: #444444;
+	cursor: default;
+}
+input[type="button"].miniButton.sort_button {
+    font-weight:normal;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background: transparent none;
+}
+input[type="button"].miniButton.sort_button.selected_sort {
+    font-weight:bold;
+    color:#333;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    background:#fff none;
+}
+
+
+/* Highlights */
+.nb_highlight {
+	background-color:#ffc;
+}
+
+.nb_runningApp {
+	background-color:#ffc;
+}
+
+.thumbHighlight {
+	background-color:#000;
+}
+
+
+/* ------------ Mindlinks ------------*/
+
+
+.nb_mindlink input[type='text'].clui-mindlinkInput {
+    width: 420px;
+    height: 18px;
+    padding: 3px;
+    resize: vertical;
+    border: solid 1px #e8e8e8;
+    color: #111;
+    font-size: 88%;
+    margin-bottom: 6px;
+}
+
+.nb_mindlink input[type='button']{
+    margin-left: 4px;
+    position: relative;
+}
+
+.lpn_group .nb_mindlink {
+    padding: 5px 10px 15px;
+}
+
+
+/* black model dialog box, new design as of Jan 2013 */
+.modal_black{
+    background: #000;
+    overflow-x:hidden;
+    padding: 23px 28px;
+}
+
+.modal_black .modal_close{
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  cursor: pointer;
+}
+
+
+/* ========== ToC ============ */
+
+.tocTable li {
+    font-size:96%;
+    margin-bottom:0.1em;
+    line-height:1.7em;
+}
+
+.tocTable li.hidden {
+    display: none;
+}
+
+#tocblocktoggle {
+    background: url('/static/nbreader/ui/images/toctoggle.png') 0 0 no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+}
+input.AHEADToc {
+    float: left;
+    margin: 0 0 0 5;
+}
+.sectionToc input {
+    float: left;
+    margin: 0 0 0 0;
+}
+ul.chapterToc {
+        display: none;
+}
+ul.chapterToc ul{
+        padding-left: 20px;
+}
+ul.AHEADToc {
+        display: none;
+}
+
+#tocblocktoggle.tocvisible {
+    background-position: 0 -16px;
+}
+#tocblocktoggle.tocinvisible {
+    background: none;
+}
+
