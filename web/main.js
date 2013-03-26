@@ -1,8 +1,3 @@
-steal('model/debate.js', function () {
-    Debate.findOne({}, function (data) {
-        console.log(data);
-    }, function () {
-        console.log("error");
-    });
-
+steal('controllers/page_controller.js', function () {
+    var pageController = new TaskController($('#page'), {});
 });
