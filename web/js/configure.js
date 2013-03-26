@@ -7,7 +7,7 @@ steal('jquery', 'clui', 'jquery/controller', 'jquery/controller/view', 'jquery/v
 
         '.saveButton {Clui.support.activateEvent}': function() {
         	Clui.activity.add( {
-		        name: 'Civil War Debate',
+		        name: 'The Dred Scott Case Debate',
 		        activityType: 2,
 		        gradable: true,
 		        scorable : true,
@@ -16,11 +16,12 @@ steal('jquery', 'clui', 'jquery/controller', 'jquery/controller/view', 'jquery/v
 		        maxTakes: 1,
 		        scoreStrategy: 1,
 		        manuallyGraded: true,
+		        refId:'dredscott',
 		        appActivityName: "Cengage.VirtualDebate/activities/vdebate",
 		        viewURI: "/index.html"
 		    });
         }
     });
 
-	$.ready(function(){$('#virtualdebateconfigure').vdebate_configure()});
+	$('#virtualdebateconfigure').vdebate_configure();
 });
