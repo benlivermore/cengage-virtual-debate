@@ -1,0 +1,30 @@
+{
+	name: "Cengage.VirtualDebate",
+	displayName: "Virtual Debate",
+	version: "1.0",
+	creator: "Cengage Learning",
+	rootURI: '/static/vdebate',
+	helpURI: '/help.html',
+	
+	activities: {
+		
+		"vdebate" : {
+			displayName: "Virtual Debate Activity",
+			description: "Add Virtual Debate",
+			icon: "images/vdebate.jpg",
+			category: "",
+			placement: "DISTINCT",
+			
+			add: {
+				uri: "/add.html",
+				roles: ['SUPER_ADMIN', 'COURSECARE', 'INSTRUCTOR']
+			},
+			configure: {
+				uri: "/configure.html",
+				roles: ['SUPER_ADMIN', 'COURSECARE', 'INSTRUCTOR']
+			}
+		}
+		
+	}
+
+}
