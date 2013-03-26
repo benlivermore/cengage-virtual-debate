@@ -1,3 +1,3 @@
-steal('controllers/page_controller.js', function () {
-    var pageController = new TaskController($('#page'), {});
+steal('vdebate/controllers/page_controller.js', function () {
+    var pageController = new TaskController($('#task'), {});
 });
