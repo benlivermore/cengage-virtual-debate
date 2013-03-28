@@ -21,8 +21,25 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', function () {
             this.element.html('views/start.ejs', {});
         },
 
-        '.start click': function () {
+        '.start click': function (el, ev) {
+            ev.preventDefault();
             this.element.html('views/write.ejs', {name:"Write opening argument"});
+        },
+
+        '.submit click': function (el, ev) {
+            ev.preventDefault();
+            this.element.html('views/reviews.ejs', {});
+        },
+
+        '.vote click': function (el, ev) {
+            ev.preventDefault();
+            $('.role').removeClass('chosen');
+            $(el).closest('.role').addClass('chosen');
+        },
+
+        '.submit_vote': function (el, ev) {
+            ev.preventDefault();
+            this.element.html('views/revise.ejs', {});
         }
     });
 });

@@ -45,6 +45,9 @@ h1 img{vertical-align:middle;}
 .role div.docs{width:150px;}
 .step .centerbuttons{text-align: center}
 
+.chosen {
+	background-color: #FF9933;
+}
 .tabs{
 	border-bottom:1px solid #999;
 	overflow:hidden;
