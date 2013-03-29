@@ -12,7 +12,9 @@ h1 img{vertical-align:middle;}
 	border:1px solid #ccc;
 	margin-bottom:18px;
 }
-
+textarea {
+	width: 600px;
+}
 .role{
 	clear:left; 
 	margin-bottom:12px; 
@@ -74,3 +76,11 @@ h1 img{vertical-align:middle;}
 .tabs .active a{color:#008CD2;}
 
 .tab2{display:none;}
+
+.chat ul li{
+	list-style-type: none;
+	background-color: #fff;
+	padding: 10px;
+	font-weight: normal;
+	width: 600px;
+}
