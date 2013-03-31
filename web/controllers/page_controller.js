@@ -62,6 +62,17 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
             ev.preventDefault();
             $.route.attr('task', 'revise');
             
+        },
+        '.submit_revision click': function () {
+            $.route.attr('task', 'approve');
+        },
+
+        '.reject click': function () {
+            $.route.attr('task', 'revise');
+        },
+
+        '.group_submit click': function () {
+            $.route.attr('task', 'write');
         }
     });
 });
