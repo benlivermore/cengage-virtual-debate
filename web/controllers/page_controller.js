@@ -34,7 +34,7 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
         },
 
         '{$.route} task change': function (name, ev, param, action, val) {
-            this.element.html('views/' + val + '.ejs', {});
+            this.element.html('views/' + val + '.ejs', VdebateModel);
 
             if (val === "revise") {
                 $('.tabs').revise_tab();
@@ -49,11 +49,13 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
 
         '.submit click': function (el, ev) {
             ev.preventDefault();
+            VdebateModel.openingArgument = this.element.find('textarea').val();
             $.route.attr('task', 'review');
         },
 
         '.vote click': function (el, ev) {
             ev.preventDefault();
+            VdebateModel.votedArgument = el.parent().siblings('.desc').text();
             $('.role').removeClass('chosen');
             $(el).closest('.role').addClass('chosen');
         },
