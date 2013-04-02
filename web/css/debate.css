@@ -84,3 +84,6 @@ textarea {
 	font-weight: normal;
 	width: 600px;
 }
+#debate {
+	display:none;
+}
