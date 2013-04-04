@@ -31,10 +31,15 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
     $.Controller('TaskController', {
         init: function () {
             this.element.html('views/start.ejs', {});
+            $(".tabs").hide();
         },
 
         '{$.route} task change': function (name, ev, param, action, val) {
             this.element.html('views/' + val + '.ejs', VdebateModel);
+            if (val != "write" && val!="review") {
+            //$(".tabs").show();
+            }
+
 
             if (val === "revise") {
                 $('.tabs').revise_tab();
@@ -45,6 +50,11 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
         '.start click': function (el, ev) {
             ev.preventDefault();
             $.route.attr('task', 'write');
+        },
+
+        '.continue click': function (el, ev) {
+            ev.preventDefault();
+            $.route.attr('task', 'write2');
         },
 
         '.submit click': function (el, ev) {
@@ -75,6 +85,11 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
 
         '.group_submit click': function () {
             $.route.attr('task', 'write');
+        },
+
+        '.approve click': function () {
+            $.route.attr('task', 'read');
         }
+
     });
 });

@@ -1,25 +1,41 @@
-body{padding:12px 24px; overflow:auto;}
+body{padding:12px 24px; overflow:auto; font-size:14px;}
 p{padding:0 10px; margin-top:0;}
-h1, h2, h3{margin-top:0;}
+h1, h2, h3{margin:0 0 6px 0;}
 .lectimg{float:left; vertical-align: middle}
 h1{
-	font-weight:bold;
-	font-size:200%;
+	font-size:300%;
+	color:#999;
+	line-height:.9;
+	margin-bottom:4px;
 }
-h1 img{vertical-align:middle;}
+h1 img{vertical-align:middle; padding-right:12px;}
+p.instruct{
+	font-size:120%;
+	color:#666;
+}
 .step{
 	padding:18px;
 	border:1px solid #ccc;
 	margin-bottom:18px;
+	background-color:#fcfcfc;
+	clear:left;
 }
 textarea {
 	width: 600px;
+	height:200px;
+	margin:0 12px;
+}
+
+div.buttons{
+	margin:12px;
+}
+div.buttons a{
+	display:inline-block;
 }
 .role{
 	clear:left; 
-	margin-bottom:12px; 
+	margin:12px 18px; 
 	overflow:hidden;
-	border-bottom:1px solid #ccc;
 	padding-bottom:12px;
 	background-color:#efefef;
 	padding:12px;
@@ -41,42 +57,49 @@ textarea {
 .role div.desc{
 	width:40%;
 }
+.role div.argument{
+	width:65%;
+}
 .role div.desc p{
 	margin-top:0;
 }
 .role div.docs{width:150px;}
-.step .centerbuttons{text-align: center}
-
-.chosen {
-	background-color: #FF9933;
-}
-.tabs{
-	border-bottom:1px solid #999;
-	overflow:hidden;
-	margin-bottom:8px;
-	border-left:1px solid #999;
-}
-.tab{
-	border:1px solid #999;	
-	border-left:0;
-	padding:8px;
-	font-weight:bold;
+.step .centerbuttons{
+	text-align: center;
+	margin-top:40px;
 	font-size:130%;
-	background-color:#eee;
-	float:left;
-	margin-bottom:-1px;
 }
-.tab a{
+
+.role.self{
+	background-color:beige;
+}
+.chosen {
+	background-color: #666;
+	color:#fff;
+}
+.chosen .button{
+	background-image:none;
+	background-color:#ccc;
+	border:1px solid #999;
+}
+.tabs a{
+	border:1px solid #999;
+	border-bottom:0;
+	padding:8px;
 	color:#666;
+	background-color:#efefef;
+	float:left;
+}
+.tabs a:first-child{
+	border-right:0;
 }
 .tabs .active{
 	background-color:#fff;
-	border-bottom:1px solid #fff;
 }
-.tabs .active a{color:#008CD2;}
+.tabs a.active{color:#008CD2;}
 
 .tab2{display:none;}
-
+.tab{display:inline;}
 .chat ul li{
 	list-style-type: none;
 	background-color: #fff;
@@ -86,4 +109,11 @@ textarea {
 }
 #debate {
 	display:none;
+}
+.chatfield{
+	display: block;
+    float: left;
+    height: 30px;
+    margin: 12px;
+    width: 530px;
 }
