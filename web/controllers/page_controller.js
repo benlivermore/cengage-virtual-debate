@@ -39,7 +39,7 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
             if (val != "write" && val!="review") {
             //$(".tabs").show();
             }
-
+            $(window).scrollTop(0);
 
             if (val === "revise") {
                 $('.tabs').revise_tab();
@@ -54,7 +54,11 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
 
         '.continue click': function (el, ev) {
             ev.preventDefault();
-            $.route.attr('task', 'write2');
+            $.route.attr('task', 'read2');
+        },
+        '.final click': function (el, ev) {
+            ev.preventDefault();
+            $.route.attr('task', 'final');
         },
 
         '.submit click': function (el, ev) {
@@ -89,7 +93,14 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
 
         '.approve click': function () {
             $.route.attr('task', 'read');
+        },
+        '.subpage click': function(){
+            $.route.attr('task', 'start');
+        },
+        '.finalhead click': function(){
+            $.route.attr('task', 'start');
         }
+
 
     });
 });

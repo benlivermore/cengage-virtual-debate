@@ -8,7 +8,9 @@ h1{
 	line-height:.9;
 	margin-bottom:4px;
 }
+h1.subpage{font-size:180%; margin-bottom:12px;}
 h1 img{vertical-align:middle; padding-right:12px;}
+h1.subpage img{margin-top:-5px;}
 p.instruct{
 	font-size:120%;
 	color:#666;
@@ -19,6 +21,7 @@ p.instruct{
 	margin-bottom:18px;
 	background-color:#fcfcfc;
 	clear:left;
+	border-radius: 4px;
 }
 textarea {
 	width: 600px;
@@ -47,7 +50,6 @@ div.buttons a{
 	border-radius: 12px;
 }
 .role div{float:left;padding:0 12px;}
-.role div.image{100px}
 .role div.image img{width:100px;}
 .role div.name{
 	width:80px;
@@ -64,7 +66,7 @@ div.buttons a{
 	margin-top:0;
 }
 .role div.docs{width:150px;}
-.step .centerbuttons{
+.centerbuttons{
 	text-align: center;
 	margin-top:40px;
 	font-size:130%;
@@ -117,3 +119,49 @@ div.buttons a{
     margin: 12px;
     width: 530px;
 }
+
+.debateview{border-collapse: collapse;}
+.debateview td, .debateview th{padding:8px; vertical-align: top}
+.debateview th{background-color:#ddd; font-size:90%;}
+.debateview div.image img{width:150px;}
+.debateview div.image{text-align:center;}
+.debateview div.name{
+	font-weight:bold;
+	font-size:120%;
+	text-align:center;
+}
+.debateview tr:nth-child(even){background-color:#efefef;}
+
+.result{
+	background-color:#daa486;
+	border-radius:8px;
+	padding:12px;
+	overflow:auto;
+	margin-bottom:12px;
+	font-size:130%;
+}
+.result .grade{
+	width:100px;
+	background-color:#bb6735;
+	border-radius: 8px;
+	float:left;
+	text-align:center;
+	margin-right:12px;
+	padding:12px 4px;
+	color:#fff;
+}
+.result .grade .gradenum{
+	display: block;
+	font-size:300%;
+	text-align:center;
+	line-height: 1;
+	font-weight: bold;
+}
+.comments{margin-bottom:12px;text-align: left;}
+
+.winner{
+	text-align: center;
+	border-radius: 8px;
+	background-color:#d39066;
+}
+.win{font-size:300%;font-weight: bold;color:#fff;}
