@@ -1,4 +1,4 @@
-steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route', 'jquery/lang/observe/delegate', 'vdebate/controllers/chat.js', function () {
+steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route', 'jquery/lang/observe/delegate', 'vdebate/controllers/chat.js', 'clui/simplemodal', function () {
 
     $.Controller('TabController', {
 
@@ -44,6 +44,7 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
             if (val === "revise") {
                 $('.tabs').revise_tab();
                 $('#chat').chat();
+                $('#modal').html('views/approve.ejs', VdebateModel);
             }
         },
 
@@ -80,20 +81,23 @@ steal('jquery/controller', 'jquery/view', 'jquery/view/ejs', 'jquery/dom/route',
             
         },
         '.submit_revision click': function () {
-            $.route.attr('task', 'approve');
+            $('#modal').clui_simplemodal();
         },
 
         '.reject click': function () {
-            $.route.attr('task', 'revise');
+            $('#modal').clui_simplemodal('close');
+        },
+
+        '.approve click': function () {
+            $('#modal').clui_simplemodal('close');
+            $.route.attr('task', 'read');
         },
 
         '.group_submit click': function () {
             $.route.attr('task', 'write');
         },
 
-        '.approve click': function () {
-            $.route.attr('task', 'read');
-        },
+        
         '.subpage click': function(){
             $.route.attr('task', 'start');
         },
